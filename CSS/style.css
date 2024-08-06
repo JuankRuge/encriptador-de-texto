@@ -67,6 +67,8 @@ header{
 .boton__encriptar,
 .boton__desencriptar,
 .boton__copiar{
+    border: 1px solid var(--color-blue);
+    cursor: pointer;
     max-width: 328px;
     width: 40%;
     height: 67px;
