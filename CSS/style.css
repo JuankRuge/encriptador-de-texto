@@ -104,6 +104,7 @@ header{
     justify-content: center;
     gap: 32px;
     align-items: center ;
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
 }.Right.ajustar{
     justify-content: space-between;
 }
