@@ -87,14 +87,15 @@ header{
 }
 .boton__copiar{
     width: 100%;
+    display: none;
     background: transparent ;  
     color: var(--color-blue); 
 }
-.oculto{
+/*.oculto{
     display: none;
-}
+} */
 .Right{
-   /* background-color: #ffffff;*/
+    background-color: #ffffff;
     height: calc(100% + 48px);
     border-radius: 32px;
     padding: 32px;
@@ -111,6 +112,9 @@ header{
 .munheco{
     width: 100%;
 }
+.oculto{
+    display: none;
+}
 .mensaje__final{
     /*background-color: aquamarine;*/
     text-align: center;
@@ -118,7 +122,13 @@ header{
     font-size: 24px;
 }
 .mensaje__final.ajustar{
-    height: 70%;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+    text-align: left;
+    font-weight: lighter;
+    height: 80%;
 }
 .right__info{
     color: var(--color_gray);

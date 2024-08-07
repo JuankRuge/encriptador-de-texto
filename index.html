@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS/style.css">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,22 +19,22 @@
     <main>
         <div class="main">
             <div class="Left">
-                <textarea class="ingreso__texto" placeholder="Ingrese texto aqui"></textarea>
+                <textarea id="ingresoTexto" class="ingreso__texto" placeholder="Ingrese texto aqui"></textarea>
                 <div class="left__footer">
                     <img src="Assets/bi_exclamation-circle-fill.svg" alt="">
                     <span class="left__info">Solo letras minúsculas y sin acentos</span>
                     <div class="left__botones">
-                        <button class="boton__encriptar">Encriptar</button>
-                        <button class="boton__desencriptar">Desencriptar</button>
+                        <button id="botonEncriptar" class="boton__encriptar">Encriptar</button>
+                        <button id="botonDesencriptar" class="boton__desencriptar">Desencriptar</button>
                     </div>
                     
                 </div>
             </div>    
-            <div class="Right ajustar">
-                <img class="munheco"src="Assets/Muñeco.png"> 
-                <p class="mensaje__final">Ningun mensaje fue encontrado</p>
-                <p class="right__info">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button class="boton__copiar oculto">Copiar</button>
+            <div id="right" class="Right">
+                <img id="munheco" class="munheco"src="Assets/Muñeco.png"> 
+                <textarea id="mensajeFinal" class="mensaje__final" placeholder="Ningun mensaje fue encontrado"></textarea>
+                <p id="rightInfo" class="right__info">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="botonCopiar" class="boton__copiar oculto">Copiar</button>
             </div>
         </div>
 
