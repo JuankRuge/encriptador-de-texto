@@ -19,7 +19,6 @@ const right = document.getElementById("right");
     //ó es convertida para "ober"
     //ú es convertida para "ufat" 
 
-
     let remplazo = [
         ["e","enter"],
         ["i","imes"],
