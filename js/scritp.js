@@ -11,7 +11,14 @@ const right = document.getElementById("right");
     //La letra "i" es convertida para "imes"
     //La letra "a" es convertida para "ai"
     //La letra "o" es convertida para "ober"
-    //La letra "u" es convertida para "ufat"
+    //La letra "u" es convertida para "ufat" 
+    
+    //á convertida para "ai"
+    //é es convertida para "enter"
+    //í es convertida para "imes"
+    //ó es convertida para "ober"
+    //ú es convertida para "ufat" 
+
 
     let remplazo = [
         ["e","enter"],
@@ -19,11 +26,16 @@ const right = document.getElementById("right");
         ["a","ai"],
         ["o","ober"],
         ["u","ufat"],
+        ["á","ai"],
+        ["é","enter"],
+        ["í","imes"],
+        ["ó","ober"],
+        ["ú","ufat"],
     ]
 
     const remplace =(nuevoValor) =>{
         mensajeFinal.innerHTML = nuevoValor;
-        munheco.classList.add = "oculto";
+        munheco.classList.add("oculto");
         ingresoTexto.value="";
         rightInfo.style.display ="none";
         botonCopiar.style.display ="block";
@@ -34,7 +46,7 @@ const right = document.getElementById("right");
 
     const reset = () => {
         mensajeFinal.innerHTML="";
-        munheco.classList.remove = "oculto";
+        munheco.classList.remove("oculto");
         rightInfo.style.display ="block";
         botonCopiar.style.display ="none";
         right.classList.remove("ajustar");
@@ -54,8 +66,17 @@ botonEncriptar.addEventListener("click", () =>{
             return newText
         };
     }else{
-        alert("Ingrese texto a Encriptar");
-        reset();
+//        alert("Ingrese texto a Encriptar");
+//       reset();
+          const mensaje = document.getElementById("mensaje");
+          mensaje.innerHTML = "Ingrese mensaje para encriptar";
+          mensaje.style.opacity = 1;           
+          setTimeout(function() {      
+               mensaje.style.opacity = 0;
+          }, 1500);
+
+          reset();
+
     }
     //const textoEncriptado = encriptar(texto);
     remplace( encriptar(texto)); 
@@ -72,7 +93,15 @@ botonDesencriptar.addEventListener("click",() =>{
             return newText
         };
     }else{
-        alert("Ingrese texto a Desencriptar")
+ //       alert("Ingrese texto a Desencriptar")
+ //       reset();
+          const mensaje = document.getElementById("mensaje");
+          mensaje.innerHTML = "Ingrese mensaje para encriptar";
+          mensaje.style.opacity = 1;           
+        setTimeout(function() {      
+            mensaje.style.opacity = 0;
+        }, 1500);
+
         reset();
     }
     
@@ -83,7 +112,14 @@ botonCopiar.addEventListener("click",() =>{
     let texto =mensajeFinal;
     texto.select();
     document.execCommand('copy')
-    alert("Texto Copiado");
-    reset();
+//    alert("Texto Copiado");
+//    reset();
+    const mensaje = document.getElementById("mensaje");
+    mensaje.innerHTML = "Texto copiado";
+    mensaje.style.opacity = 1;
+    setTimeout(function() {      
+        mensaje.style.opacity = 0;
+    }, 1500);
 
+    reset();
 })

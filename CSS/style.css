@@ -11,9 +11,6 @@ body{
       }  
 
 /*Header*/
-header{
-    /*background-color: antiquewhite;*/
-}
 .header{
     /*background-color: aquamarine;*/
     width: 90%;
@@ -135,6 +132,12 @@ header{
     font-size: 16px;
     text-align: center;
 }
+.mensaje__jk {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--color-blue); 
+}
 
 /* footer{
     background-color: blueviolet;
@@ -170,4 +173,22 @@ header{
         max-width: none;
         width: 100%;
     }
+}
+
+#mensaje {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: #FFF;
+    margin-top: 15px;
+    margin-left: 41%;
+    position: absolute;
+    width: 220px;
+    height: 30px;
+    background-color: #495057;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
 }
