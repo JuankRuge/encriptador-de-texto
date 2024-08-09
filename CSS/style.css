@@ -135,7 +135,8 @@ body{
 .mensaje__jk {
     font-size: 14px;
     text-align: center;
-    font-weight: 400;
+    font-weight: inherit;
+    font-style: italic;
     color: var(--color-blue); 
 }
 
